@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT: Smart Plant</title>
+  <link rel="stylesheet" href="index.css">
+  </link>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+  <script src="index.js"></script>
+
+</head>
+<body>
+  
+  <div id="page">
+    <h1> Smart Plant</h1>
+  <div class="dashboard">
+    <div class="content">
+      <div class="sensor">
+        <div class="image" id="pianta">
+          <img src="Spathiphyllum_piccola_pianta_da_interni_11.png" alt="Spathiphyllum Plant">
+        </div>
+          <div class="sensor-header">Soil Moisture</div>
+          <div class="sensor-value">45%</div>
+          <div class="sensor-footer">Optimal range: 40-60%</div>
+      </div>
+      <div class="sensor">
+        <div class="image" id="serbatoio">
+          <img src="Serbatoio Polietilene 300 Litri Orizzontale.png" alt="Water Tank">
+        </div>
+        <div class="sensor-header">Water Tank Level</div>
+        <div class="sensor-value">75%</div>
+        <div class="sensor-footer">Capacity: 300 Liters</div>
+      </div>
+    </div>
+
+    <h4 id="linea"></h4>
+  </div>
+  <div id="second">
+    <div id="tabella">
+    <l> Last 10 measurements</l>
+      <table id="myTable">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Humidity</th>
+            <th>Water Level</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    
+    <div id="grafici">
+        <l> Graph </l>
+    <canvas height="500px" width="500px"  id="Graph"></canvas>
+    </div>
+  </div>
+    </div>
+  </div>
+</body>
+</html>

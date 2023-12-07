@@ -1,0 +1,106 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dashboard {
+    text-align: center;
+  }
+
+  .dashboard-header {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Modificato per allineare i contenuti in alto */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .sensor {
+    margin: 0 10px;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+  }
+
+  .sensor-header {
+    font-size: 18px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+
+  .sensor-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .sensor-footer {
+    font-size: 14px;
+    color: #777;
+  }
+
+  .chart-container {
+    margin-top: 20px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+
+
+
+  #linea{
+    background:grey;
+    height:5px;
+    width: 300px;
+    
+    margin-bottom:10px;
+  }
+  #grafici{
+    margin-left: 30px;
+    margin-top: 50px;
+  }
+  #second{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+  }
+  #tabella{
+    margin-left:20px;
+    text-align:left;
+  }
+  l{
+      font-weight:bold;
+   margin-left:140px; 
+    font-size: 20px;
+  }
