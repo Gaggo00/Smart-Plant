@@ -20,11 +20,13 @@ Frequently, the question arises about the best watering frequency for plants. Ho
 ![](/images/soil-moisture.png)
 
 - **Water level** sensor checks that we have a sufficient amount of water in our tank for irrigating our plants. This ensures that when needed, the water pump will have an adequate supply for irrigation.
+
 ![](/images/water_level.jpg)
 
 ### Actuators
-- **Water pump**
-![](/images/water_pump.png) irrigates the plants. The activation of the water pump is initiated by a humidity sensor, triggered only when the plant's humidity drops below a specific threshold, which varies based on the type of plants.
+- **Water pump** irrigates the plants. The activation of the water pump is initiated by a humidity sensor, triggered only when the plant's humidity drops below a specific threshold, which varies based on the type of plants.
+
+![](/images/water_pump.png) 
 
 ### Blog Post
 
