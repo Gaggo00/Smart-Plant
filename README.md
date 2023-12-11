@@ -32,7 +32,7 @@ The details collected by the two sensors are sent to the AWS system, allowing us
 ![](/images/network_architecture.jpg)
 ### Blog Post
 
-- [Blog Post]()
+- [Blog Post](https://www.hackster.io/gavrieldnp/smart-plant-abd308)
 
 ### Video
 
