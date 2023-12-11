@@ -16,6 +16,8 @@ Frequently, the question arises about the best watering frequency for plants. Ho
 ![](/images/riot_os.png)
 
 ![](/images/soil-moisture.png)
+![](/images/water_pump.png)
+![](/images/water_level.png)
 ### Blog Post
 
 - [Blog Post]()
