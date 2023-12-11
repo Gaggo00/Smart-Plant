@@ -10,7 +10,9 @@ Frequently, the question arises about the best watering frequency for plants. Ho
 ### Concept
 
 ### Component
-
+#Heltec LoRa 32 and Riot OS
+![](/images/LORA32.png)
+![](/images/riotos.png)
 ### Blog Post
 
 - [Blog Post]()
