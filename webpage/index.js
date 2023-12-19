@@ -1,3 +1,16 @@
+function formatTimestamps(timestamps) {
+  return timestamps.map(timestamp => {
+      const [data, orario] = timestamp.split("T"); // Dividi data e orario
+      const [giorno, mese, anno] = data.split("-");
+      const [ora, minuti, secondi] = orario.split(":");
+      
+      // Costruisci una nuova stringa di data nel formato desiderato
+      const formattedTimestamp = `${giorno}-${mese}-${anno.slice(-2)}T${ora}:${minuti}`;
+
+      return formattedTimestamp;
+  });
+}
+
 function callAPI1() {
     var myHeaders = new Headers();
     var requestOptions = {
@@ -54,7 +67,7 @@ function callAPI1() {
       
       
       function provaTabella(data) {
-        // Dati JSON di esempio
+    
         var datiJSON = data;
       
         data.sort(function(a, b) {
@@ -123,61 +136,64 @@ function callAPI1() {
           data2.push(datiJSON[i]["water_level"]);
         }
       
-        document.getElementById("grafici").innerHTML = "<l> Graph </l> <canvas id='Graph' height='500px' width='600px'></canvas>"
-        var ctx = document.getElementById("Graph").getContext("2d");
+        document.getElementById("grafici").innerHTML = "<l> Graph </l> <canvas id='myChart' height='300px' width='400px'></canvas>"
+        var ctx = document.getElementById("myChart").getContext("2d");
+        Chart.defaults.font.size = 16;
+        new_labels = formatTimestamps(labels);
         var myChart = new Chart(ctx, {
           type: "line",
           data: {
-            labels: labels,
+            labels: new_labels,
             datasets: [
               {
                 label: "humidity",
                 data: data1,
-                backgroundColor: 'rgba(0, 0, 0, 0)', // Rende lo sfondo trasparente
+                backgroundColor: "rgba(75, 192, 192, 1)", // Rende lo sfondo trasparente
                 borderColor: "rgba(75, 192, 192, 1)",
                 borderWidth: 3
               },
               {
                 label: "water_level",
                 data: data2,
-                backgroundColor: 'rgba(0, 0, 0, 0)', // Rende lo sfondo trasparente
+                backgroundColor: "rgba(192, 75, 192, 1)", // Rende lo sfondo trasparente
                 borderColor: "rgba(192, 75, 192, 1)",
                 borderWidth: 3
               }
             ]
           },
           options: {
+
+            plugins: {
+              legend: {
+                display:true,
+                labels: {
+                  color: "black"
+
+                },
+              },
+        
+            },
             scales: {
               x: {
                 ticks: {
-                  color: "white" // Colore dei tick dell'asse X
+                  color: "black" // Colore dei tick dell'asse X
                 }
+                
             },
               y: {
                 ticks: {
-                  color: "white" // Colore dei tick dell'asse Y
-                }
-              }
-            },
-            plugins: {
-              legend: {
-                labels: {
-                  color: "white" // Colore del testo della legenda
+                  color: "black", // Colore dei tick dell'asse Y
+                  
                 }
               },
-              annotation: {
-                annotations: [{
-                  type: "box",
-                  drawTime: "beforeDatasetsDraw",
-                  yScaleID: "y",
-                  backgroundColor: "rgba(255, 255, 255, 1)"
-                }]
-              }
+              
             }
+
           }
         });
-      }
       
+      }
+
       function init() {
           setInterval(callAPI1, 4000);
           setInterval(callAPI2, 10000);
