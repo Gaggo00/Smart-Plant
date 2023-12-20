@@ -30,6 +30,11 @@ Frequently, the question arises about the best watering frequency for plants. Ho
 ### AWS ecosystem
 The details collected by the two sensors are sent to the AWS system, allowing us to continuously monitor the plant's status. AWS IoT Core ensures secure communication between the ESP32 board and the cloud, where the information is securely stored in Amazon DynamoDB. Real-time data processing is carried out by AWS Lambda functions. Amazon API Gateway provides a secure website for users to monitor and control the system, and AWS Amplify simplifies the creation of a user-friendly app. All in all, these services ensure a seamless connection for the smart Plant project, enabling real-time data analysis, access control, and an improved user experience.
 ![](/images/network_architecture.jpg)
+
+### Irrigation: Optimal Growth with Bottom Watering
+
+In the Smart Plant system, we prioritize bottom watering to ensure uniform and efficient moisture distribution in the soil. The use of a tube for watering poses challenges in achieving consistent soil wetting. By adopting bottom watering, we mitigate the risk of overwatering, promote the development of robust root systems, and encourage even root distribution in the soil. This method minimizes the potential for plant pests and fungal diseases. The brief retention of moisture in the soil allows plants to absorb precisely the amount of water they need, fostering healthy growth while preventing issues associated with water excess. The strategic placement of the watering tube in our project reflects our commitment to optimizing plant health through intelligent irrigation practices.
+
 ### Blog Post
 
 - [Blog Post](https://www.hackster.io/gavrieldnp/smart-plant-abd308)
