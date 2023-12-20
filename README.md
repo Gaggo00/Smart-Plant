@@ -32,8 +32,8 @@ The details collected by the two sensors are sent to the AWS system, allowing us
 ![](/images/network_architecture.jpg)
 
 ### Irrigation: Optimal Growth with Bottom Watering
-
 In the Smart Plant system, we prioritize bottom watering to ensure uniform and efficient moisture distribution in the soil. The use of a tube for watering poses challenges in achieving consistent soil wetting. By adopting bottom watering, we mitigate the risk of overwatering, promote the development of robust root systems, and encourage even root distribution in the soil. This method minimizes the potential for plant pests and fungal diseases. The brief retention of moisture in the soil allows plants to absorb precisely the amount of water they need, fostering healthy growth while preventing issues associated with water excess. The strategic placement of the watering tube in our project reflects our commitment to optimizing plant health through intelligent irrigation practices.
+![](/images/Bottom-Watering.jpg)
 
 ### Blog Post
 
