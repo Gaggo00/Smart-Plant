@@ -33,10 +33,12 @@ The details collected by the two sensors are sent to the AWS system, allowing us
 
 ### Sample period: 
 **How often should the humidity be measured?** The plant's humidity will be measured using a linear function based on the average time it takes for the plant to return to a dry state given its optimal condition. If the plant is below a certain threshold, it will be watered from below, and after 25 minutes, the time needed for the plant to absorb water, a new measurement will be taken.
+
 **How often should the water level be measured?** The frequency of measuring the water level is tied to the plant's irrigation cycle. Given that the water level primarily changes when we irrigate the plant, measurements are scheduled immediately after each irrigation event.
 
 ### Irrigation: Optimal Growth with Bottom Watering
 In the Smart Plant system, we prioritize bottom watering to ensure a consistent and efficient distribution of moisture in the soil. Using a tube for watering presents challenges in achieving uniform soil wetting. By adopting bottom watering, we address the risk of overwatering, promote the development of robust root systems, and encourage even root distribution in the soil. This method minimizes the potential for plant pests and fungal diseases. The brief retention of moisture in the soil allows plants to absorb precisely the amount of water they need, fostering healthy growth while preventing issues associated with excess water. The strategic placement of the watering tube in the project also reflects the impossibility of uniformly irrigating the plant from above.
+
 ![](/images/Bottom-Watering.jpg)
 
 ### Blog Post
