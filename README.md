@@ -47,4 +47,6 @@ In the Smart Plant system, we prioritize bottom watering to ensure a consistent 
 
 ### Video
 
-- [Video Presentation]()
+- [Video Presentation](https://youtu.be/y7Vcms6Gt4k)
+### Linkedin
+- [](https://it.linkedin.com/in/gavriel-di-nepi-544a971b1?trk=public_profile_browsemap_profile-result-card_result-card_full-click)
