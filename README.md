@@ -27,6 +27,9 @@ Frequently, the question arises about the best watering frequency for plants. Ho
 - **Water pump** irrigates the plants. The activation of the water pump is initiated by a humidity sensor, triggered only when the plant's humidity drops below a specific threshold, which varies based on the type of plants.
 
 ![](/images/water_pump.png) 
+### Circuit Diagram
+![](/images/Circuit diagram.png)
+
 ### AWS ecosystem
 The details collected by the two sensors are sent to the AWS system, allowing us to continuously monitor the plant's status. AWS IoT Core ensures secure communication between the ESP32 board and the cloud, where the information is securely stored in Amazon DynamoDB. Real-time data processing is carried out by AWS Lambda functions. Amazon API Gateway provides a secure website for users to monitor and control the system, and AWS Amplify simplifies the creation of a user-friendly app. All in all, these services ensure a seamless connection for the smart Plant project, enabling real-time data analysis, access control, and an improved user experience.
 ![](/images/network_architecture.jpg)
