@@ -38,7 +38,7 @@ uint_fast8_t water_level_sensor = ADC_LINE(0); // Pin 36
 uint_fast8_t humidity_sensor = ADC_LINE(1); // Pin 39
 
 #define THRESHOLD_HUMIDITY 1500
-#define MAX_HUMIDITY 2200
+#define MAX_HUMIDITY 2000
 #define WATER_ABSORPTION_TIME 1200
 #define SOIL_DRYING_TIME 115200
 
