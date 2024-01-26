@@ -19,7 +19,7 @@ Frequently, the question arises about the best watering frequency for plants. Ho
 
 ![](/images/soil-moisture.png)
 
-- **Water level** sensor checks that we have a sufficient amount of water in our tank for irrigating our plants. This ensures that when needed, the water pump will have an adequate supply for irrigation.
+- **Water level** sensor checks that we have a sufficient amount of water in our tank for irrigating our plants. This ensures that when needed, the water pump will have an adequate supply for irrigation. 
 
 ![](/images/water_level.jpg)
 
@@ -110,9 +110,22 @@ $ _sudo BOARD=esp32s3-heltec-lora32-v2 BUILD_IN_DOCKER=1 DOCKER="sudo docker" PO
 (check the name of your USB it could be different from "ttyUSB0")
 
 - In the JavaScript file of the web application, make sure to change the URL passed in the "callAPI()" function to the one corresponding to your API endpoint.
-- Now everything should work, and you should start to see the real data updates in the web dashboard. You can see this process in more detail by watching the YouTube video demonstration of the project.
+- Now everything should work, and you should start to see the real data updates in the web dashboard.You can see this process in more detail by watching the YouTube video demonstration of the project. 
 
+**NOTE: To ensure the system functions correctly, you need to adjust some parameters. My values were based on my tank and plant. Below, you can find the reasons for my values to help you decide on yours:**
 
+- **Water level position:** Take into account that the water pump must be covered by the water to function. Setting the sensor too low is pointless. You also need to recompute the function in main.c that converts the ADC value to milliliters. I used a balance to weigh the water and, by comparing various pairs (adc_value, ml), I computed a function.
+
+-**Sample period:** For my project, I initially chose a sample period of 32 hours. However, this depends on the plant and the jar you want to irrigate. My suggestion is to over-sample in the first few days. In particular, you have to update the value SOIL_DRYING_TIME_ which manages the sampling time. The variable should represent the mean time to turn back to the value of threshold
+
+-**Water pump:** In the current configuration, the pump delivers about 6.6 ml/s. The system activates the pump for 10 seconds, providing 66 ml to the plant. However, this depends on the jar. If you modify this value, you must also change the function in the JavaScript that calculates how many days the water should last.
+ 
+
+### Dashboard
+![](/images/web_dashboard1.png)
+![](/images/web_dashboard2.png)
+
+[link to the dashboard](https://dev5045.d1qb3ntwxt4qrk.amplifyapp.com/)
 
 ### Blog Post
 
@@ -121,5 +134,6 @@ $ _sudo BOARD=esp32s3-heltec-lora32-v2 BUILD_IN_DOCKER=1 DOCKER="sudo docker" PO
 ### Video
 
 - [Video Presentation](https://youtu.be/y7Vcms6Gt4k)
+
 ### Linkedin
 - [Linkedin profile](https://it.linkedin.com/in/gavriel-di-nepi-544a971b1?trk=public_profile_browsemap_profile-result-card_result-card_full-click)

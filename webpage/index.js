@@ -37,7 +37,15 @@ function callAPI1() {
       document.getElementById("humidity").innerText = data[0]["humidity"];
       document.getElementById("water_level").innerText = data[0]["water_level"];
       document.getElementById("ts").innerText = "Measurement taken at: " + date + " " + time;
-  }
+      var water_level = data[0]["water_level"];
+      if (water_level < 632){
+        document.getElementById("sensor-footer-Water").innerText = "There is not enough water to irrigate";
+      }
+      else{
+      document.getElementById("sensor-footer-Water").innerText = "The water is enough for " + ((data[0]["water_level"]-632) / 66).toFixed(1) + " days";
+      }
+  
+    }
 
 
 

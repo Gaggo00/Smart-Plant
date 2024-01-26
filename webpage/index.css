@@ -131,6 +131,10 @@ body{
     font-size: 15px;
     color: #777;
   }
+  #sensor-footer-Water{
+    font-size: 15px;
+    color: #777;
+  }
 
   .chart-container {
     margin-top: 20px;
