@@ -116,9 +116,9 @@ $ _sudo BOARD=esp32s3-heltec-lora32-v2 BUILD_IN_DOCKER=1 DOCKER="sudo docker" PO
 
 - **Water level position:** Take into account that the water pump must be covered by the water to function. Setting the sensor too low is pointless. You also need to recompute the function in main.c that converts the ADC value to milliliters. I used a balance to weigh the water and, by comparing various pairs (adc_value, ml), I computed a function.
 
--**Sample period:** For my project, I initially chose a sample period of 32 hours. However, this depends on the plant and the jar you want to irrigate. My suggestion is to over-sample in the first few days. In particular, you have to update the value SOIL_DRYING_TIME_ which manages the sampling time. The variable should represent the mean time to turn back to the value of threshold
+- **Sample period:** For my project, I initially chose a sample period of 32 hours. However, this depends on the plant and the jar you want to irrigate. My suggestion is to over-sample in the first few days. In particular, you have to update the value SOIL_DRYING_TIME_ which manages the sampling time. The variable should represent the mean time to turn back to the value of threshold
 
--**Water pump:** In the current configuration, the pump delivers about 6.6 ml/s. The system activates the pump for 10 seconds, providing 66 ml to the plant. However, this depends on the jar. If you modify this value, you must also change the function in the JavaScript that calculates how many days the water should last.
+- **Water pump:** In the current configuration, the pump delivers about 6.6 ml/s. The system activates the pump for 10 seconds, providing 66 ml to the plant. However, this depends on the jar. If you modify this value, you must also change the function in the JavaScript that calculates how many days the water should last.
  
 
 ### Dashboard
